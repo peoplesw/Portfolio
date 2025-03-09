@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Cristino - Personal Portfolio Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+        <meta name="keywords" content="Bootstrap 5, premium, marketing, multipurpose">
+        <meta content="Shreethemes" name="author">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- Lightbox -->
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css">
+        <!-- Icon -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+        <!-- SLIDER -->
+        <link rel="stylesheet" href="css/tiny-slider.css"/>
+        <!-- Custom Css -->
+        <link href="css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt">
+        <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+    </head>
+
+    <style>
+       #home {
+            background-image: url('images/home/01.png');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+       }
+
+       .hero-image {
+            display: none;
+       }
+       
+       @media (max-width: 1242px) {
+            #home {
+                background-image: none !important;
+                padding-top: 100px; /* Add padding at the top to push content down */
+            }
+            .hero-image {
+                display: block;
+                position: absolute;
+                top: 150px; /* Increased space from top */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 300px;
+                height: 300px;
+                z-index: 1;
+            }
+            .container.position-relative {
+                padding-top: 0;
+            }
+            .title-heading {
+                text-align: center;
+                padding-top: 500px; /* Increased to account for nav + hero image + spacing */
+            }
+            .title-heading .para-desc {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+        }
+
+        @media (min-width: 1243px) {
+            .title-heading {
+                padding-top: 0;
+            }
+        }
+
+        @media (max-width: 1242px) {
+            .hero-image {
+                display: block;
+            }
+        }
+
+        .service-wrapper {
+            background-color: white;
+            height: 250px;
+        }
+
+        .portfolio-box {
+            transition: none !important;
+        }
+        .portfolio-box .portfolio-box-img img {
+            transition: none !important;
+            opacity: 1 !important; /* Force opacity to stay at 1 */
+        }
+        .portfolio-box .portfolio-box-img .overlay-work {
+            display: none !important;
+        }
+        .portfolio-box .gallary-title {
+            background: transparent !important;
+        }
+        .portfolio-box .gallary-title .title:hover {
+            color: inherit !important;
+        }
+        .portfolio-box:hover {
+            transform: none !important;
+        }
+        .portfolio-box:hover .portfolio-box-img img {
+            transform: none !important;
+            opacity: 1 !important; /* Force opacity to stay at 1 on hover */
+        }
+
+        .picture-item {
+            cursor: pointer;
+        }
+    </style>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="logo">
+                    <img src="images/logo.png" height="20" class="d-block mx-auto" alt="">
+                </div>
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader -->
+        
+        <!-- Navbar Start -->
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
+    		<div class="container">
+                <a class="navbar-brand" href="">
+                    <img src="" class="logo-light-mode" alt="">
+                    <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span data-feather="menu" class="fea icon-md"></span>
+                </button><!--end button-->
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul id="navbar-navlist" class="navbar-nav navbar-nav-link mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li><!--end nav item-->
+                    </ul>
+
+                    <ul class="list-unstyled mb-0 mt-2 mt-sm-0 social-icon">
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-instagram"></i></a></li>
+                    </ul>
+                </div> 
+            </div><!--end container-->
+		</nav><!--end navbar-->
+        <!-- Navbar End -->
+
+        <!-- HOME START-->
+        <section class="bg-home bg-light d-table w-100" id="home">
+            <div class="container position-relative">
+                <div class="hero-image mt-5" style="width: 300px; height: 300px; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 1;">
+                    <img src="images/home/hero.jpg" alt="" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="title-heading mt-5" style="padding-top: 300px;">
+                            <h6 class="sub-title">Looking for a Web Producer !</h6>
+                            <h1 class="heading text-primary mb-3">I'm William Peoples</h1>
+                            <p class="para-desc text-muted">Crafting seamless digital experiences from concept to launch. As a Web Producer, I manage every detail to ensure your web projects are delivered flawlessly.</p>
+                            <div class="mt-4 pt-2">
+                                <a href="javascript:void(0)" class="btn btn-primary rounded mb-2 me-2">Portfolio</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->             
+        </section><!--end section-->
+        <!-- HOME END-->
+        
+        <!-- About Start -->
+        <section class="section pb-3" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="about-hero">
+                            <img src="images/hero.png" class="img-fluid mx-auto d-block about-tween position-relative" alt="">
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                        <div class="section-title mb-0 ms-lg-5 ms-md-3">
+                            <h4 class="title text-primary mb-3">Cristino Murphy</h4>
+                            <h6 class="designation mb-3">I'm a Passionate <span class="text-primary">Web Designer</span></h6>
+                            <p class="text-muted">Obviously I'm a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. The as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p class="text-muted">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <img src="images/sign.png" height="22" alt="">
+                            <div class="mt-4">
+                                <a href="#projects" class="btn btn-primary mouse-down">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+            <div class="container mt-100 mt-60">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">Hobbies & Interests</h4>
+
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="monitor" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Developing</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="stop-circle" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Mac OS</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="video" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Cinema</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="coffee" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Coffee</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="music" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Music</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="watch" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Games</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="box" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Designing</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="target" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Sports</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="pen-tool" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Painting</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="book" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Reading</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="smartphone" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Android</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pt-2">
+                        <div class="interests-desc bg-light position-relative px-2 py-3 rounded">
+                            <div class="hobbies d-flex align-items-center">
+                                <div class="text-center rounded-pill me-4">
+                                    <i data-feather="activity" class="icon fea icon-md-sm"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title mb-0">Other Activity</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div>
+            </div><!--end container-->
+
+            <div class="container-fluid mt-100 mt-60">
+                <div class="rounded py-md-5 py-4" style="background: url('images/bg-counter.jpg') center center;">
+                    <div class="container">
+                        <div class="row" id="counter">
+                            <div class="col-lg-3 col-6">
+                                <div class="counter-box rounded py-3 text-center">
+                                    <div class="counter-icon">
+                                        <i data-feather="smile" class="fea icon-md text-primary"></i>
+                                    </div>
+                                    <h3 class="counter-value mt-3 text-white title-dark" data-target="1251">95</h3>
+                                    <h6 class="counter-head font-weight-normal mb-0 text-white title-dark">Happy Client</h6>
+                                </div><!--end counter box-->
+                            </div><!--end col-->
+    
+                            <div class="col-lg-3 col-6">
+                                <div class="counter-box rounded py-3 text-center">
+                                    <div class="counter-icon">
+                                        <i data-feather="award" class="fea icon-md text-primary"></i>
+                                    </div>
+                                    <h3 class="counter-value mt-3 text-white title-dark" data-target="15">1</h3>
+                                    <h6 class="counter-head font-weight-normal mb-0 text-white title-dark">Award Won</h6>
+                                </div><!--end counter box-->
+                            </div><!--end col-->
+    
+                            <div class="col-lg-3 col-6">
+                                <div class="counter-box rounded py-3 text-center">
+                                    <div class="counter-icon">
+                                        <i data-feather="coffee" class="fea icon-md text-primary"></i>
+                                    </div>
+                                    <h3 class="counter-value mt-3 text-white title-dark" data-target="3261">30</h3>
+                                    <h6 class="counter-head font-weight-normal mb-0 text-white title-dark">Cup of Coffee</h6>
+                                </div><!--end counter box-->
+                            </div><!--end col-->
+    
+                            <div class="col-lg-3 col-6">
+                                <div class="counter-box rounded py-3 text-center">
+                                    <div class="counter-icon">
+                                        <i data-feather="thumbs-up" class="fea icon-md text-primary"></i>
+                                    </div>
+                                    <h3 class="counter-value mt-3 text-white title-dark" data-target="36">3</h3>
+                                    <h6 class="counter-head font-weight-normal mb-0 text-white title-dark">Project Complete</h6>
+                                </div><!--end counter box-->
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div><!--end container-->
+                </div><!--end div-->
+            </div><!--end container fluid-->
+        </section>
+        <!-- About end -->
+            
+        <!-- Services Start -->
+        <section class="section bg-light" id="skills">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">My Skills</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Skilled Web Producer with expertise in managing all phases of web projects, from planning and design to development and launch, ensuring seamless execution.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 512 512" class="svg replaced-svg"><path d="m0 0 31.800781 448.101562 194.398438 63.898438 194.398437-63.898438 31.800782-448.101562zm0 0" fill="#ff7816"></path><path d="m452.398438 0-31.800782 448.101562-194.398437 63.898438v-512zm0 0" fill="#ff4b00"></path><path d="m367.5 136h-222.300781l5.398437 75h211.503906l-12.902343 181.597656-123 41.101563-123-41.101563-4.199219-60.597656h60l1.199219 16.5 66 21.898438 66-21.898438 5.398437-77.5h-203.097656l-13.800781-195h291zm0 0" fill="#ececf1"></path><g fill="#e2e2e7"><path d="m362.101562 211-12.902343 181.597656-123 41.101563v-63.300781l66-21.898438 5.398437-77.5h-71.398437v-60zm0 0"></path><path d="m371.699219 76-4.199219 60h-141.300781v-60zm0 0"></path></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">HTML</h5>
+                            </div>
+                        
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="svg replaced-svg"><polygon style="fill:#2196F3;" points="32,0 72.8,460.8 256,512 439.136,460.832 480,0 "></polygon><polygon style="fill:#FAFAFA;" points="392.768,150.688 387.616,208.576 372.064,382.112 256,414.208 255.904,414.24   139.904,382.112 131.808,291.36 188.64,291.36 192.864,338.432 255.936,355.456 255.968,355.424 319.136,338.4 327.744,259.968   129.088,260.512 123.456,206.88 332.512,204.416 336.736,147.008 117.856,147.616 114.176,94.208 256,94.208 397.824,94.208 "></polygon><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">CSS</h5>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                               <img src="images/home/js.png" alt="" style="width: 68px; height: 76.5px;">
+                            </div>
+                            <div class="content mt-3">
+                                <h5 class="title">Javascript</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="svg replaced-svg"><polygon style="fill:#C7CFE2;" points="239.484,363.355 156.903,363.355 148.645,421.161 247.742,421.161 "></polygon><polygon style="fill:#AFB9D2;" points="243.023,388.129 239.484,363.355 156.903,363.355 153.364,388.129 "></polygon><path style="fill:#D5DCED;" d="M379.871,371.613H16.516C7.395,371.613,0,364.217,0,355.096v-256c0-9.122,7.395-16.516,16.516-16.516  h363.355c9.122,0,16.516,7.395,16.516,16.516v256C396.387,364.217,388.993,371.613,379.871,371.613z"></path><path style="fill:#C7CFE2;" d="M16.516,82.581C7.395,82.581,0,89.975,0,99.097v256c0,9.121,7.395,16.516,16.516,16.516h272.516  L107.355,82.581H16.516z"></path><path style="fill:#5B5D6E;" d="M379.871,82.581H16.516C7.395,82.581,0,89.975,0,99.097v231.226h396.387V99.097  C396.387,89.975,388.992,82.581,379.871,82.581z"></path><path style="fill:#464655;" d="M0,99.097v231.226h263.078L107.355,82.581H16.516C7.395,82.581,0,89.975,0,99.097z"></path><path style="fill:#00AAF0;" d="M363.355,305.548H33.032c-4.561,0-8.258-3.697-8.258-8.258V115.613c0-4.561,3.697-8.258,8.258-8.258  h330.323c4.561,0,8.258,3.697,8.258,8.258V297.29C371.613,301.851,367.916,305.548,363.355,305.548z"></path><path style="fill:#AFB9D2;" d="M429.423,222.968H313.806c-9.122,0-16.516,7.395-16.516,16.516v173.419  c0,9.122,7.395,16.516,16.516,16.516H429.42c9.121,0,16.516-7.394,16.516-16.516l0.003-173.42  C445.939,230.362,438.544,222.968,429.423,222.968z"></path><path style="fill:#959CB5;" d="M297.29,239.484v173.419c0,9.121,7.395,16.516,16.516,16.516h115.613L313.806,222.968  C304.685,222.968,297.29,230.362,297.29,239.484z"></path><path style="fill:#00C3FF;" d="M433.548,404.645H309.677c-2.28,0-4.129-1.849-4.129-4.129V251.871c0-2.28,1.849-4.129,4.129-4.129  h123.871c2.28,0,4.129,1.849,4.129,4.129v148.645C437.677,402.797,435.829,404.645,433.548,404.645z"></path><path style="fill:#5B5D6E;" d="M355.097,338.581h148.645c4.561,0,8.258,3.697,8.258,8.258v74.323c0,4.561-3.697,8.258-8.258,8.258  H355.097c-4.561,0-8.258-3.697-8.258-8.258v-74.323C346.839,342.278,350.536,338.581,355.097,338.581z"></path><path style="fill:#464655;" d="M355.097,338.581c-4.561,0-8.258,3.697-8.258,8.258v74.323c0,4.56,3.697,8.258,8.258,8.258h99.097  l-49.548-90.839H355.097z"></path><path style="fill:#D5DCED;" d="M264.258,429.419H132.129c-4.565,0-8.258-3.698-8.258-8.258s3.694-8.258,8.258-8.258h132.129  c4.565,0,8.258,3.698,8.258,8.258S268.823,429.419,264.258,429.419z"></path><path style="fill:#959CB5;" d="M206.452,359.226h-16.516c-4.561,0-8.258-3.697-8.258-8.258l0,0c0-4.561,3.697-8.258,8.258-8.258  h16.516c4.561,0,8.258,3.697,8.258,8.258l0,0C214.71,355.529,211.012,359.226,206.452,359.226z"></path><path style="fill:#00D2FF;" d="M483.097,421.161H375.742c-2.28,0-4.129-1.849-4.129-4.129v-66.065c0-2.28,1.849-4.129,4.129-4.129  h107.355c2.28,0,4.129,1.849,4.129,4.129v66.065C487.226,419.313,485.377,421.161,483.097,421.161z"></path><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">Responsive Design</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <img src="images/home/wpLogo.png" alt="" style="width: 80px; height: 80px;">
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">Wordpress</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                               <img src="images/home/shopifyLogo.png" alt="" style="width: 120px; height: 100px;">
+                            </div>
+                            <div class="content mt-1">
+                                <h5 class="title">Shopify</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section>
+        <!-- Services End -->
+
+        <!-- Resume Start -->
+        <section class="section" id="resume">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">Work Participation</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-icon rounded-pill text-center mt-4 pt-2">
+                            <i data-feather="star" class="fea icon-md-sm"></i>
+                        </div>
+                        <div class="timeline-page pt-2 position-relative">
+                            <div class="timeline-item mt-4">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="duration date-label-left border rounded p-2 ps-4 pe-4 position-relative shadow text-start">2015 - 2018</div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="event event-description-right rounded p-4 border float-left text-start">
+                                            <h5 class="title mb-0 text-capitalize">UX Designer</h5>
+                                            <small class="company">Vivo - Senior Designer</small>
+                                            <p class="timeline-subtitle mt-3 mb-0 text-muted">The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                        </div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end timeline item-->
+            
+                            <div class="timeline-item mt-4">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
+                                        <div class="event event-description-left rounded p-4 border float-left text-end">
+                                            <h5 class="title mb-0 text-capitalize">Web Developer</h5>
+                                            <small class="company">Oppo - HR Manager</small>
+                                            <p class="timeline-subtitle mt-3 mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia magna vel molestie faucibus. Donec auctor et urnaLorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                        <div class="duration duration-right rounded border p-2 ps-4 pe-4 position-relative shadow text-start">2012 - 2015</div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end timeline item-->
+        
+                            <div class="timeline-item mt-4">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="duration date-label-left border rounded p-2 ps-4 pe-4 position-relative shadow text-start"> 2012 - 2010</div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="event event-description-right rounded p-4 border float-left text-start">
+                                            <h5 class="title mb-0 text-capitalize">Graphic Designer</h5>
+                                            <small class="company">Apple - Testor</small>
+                                            <p class="timeline-subtitle mt-3 mb-0 text-muted">Therefore always free from repetition, injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, </p>
+                                        </div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end timeline item-->
+                        </div><!--end timeline page-->
+                        <!-- TIMELINE END -->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->   
+        <!-- Skill End -->
+
+        <!-- Skill & CTA START -->
+        <section class="cta-full border-top">
+            <div class="container-fluid">
+                <div class="row position-relative">
+                    <div class="col-lg-4 padding-less img" style="background-image:url('images/skills.jpg')" ></div><!-- end col -->
+                    <div class="col-lg-8 offset-lg-4">
+                        <div class="cta-full-img-box">
+                            <div class="row justify-content-center">
+                                <div class="col-12 text-center">
+                                    <div class="section-title">
+                                        <div class="position-relative">
+                                            <h4 class="title text-uppercase mb-4">Work Expertise</h4>
+                                            <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                                        </div>
+                                        <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+
+                            <div class="row align-items-center">
+                                <div class="col-lg-3 col-md-4 col-12">
+                                    <ul class="nav nav-pills flex-column px-0" id="pills-tab" role="tablist">
+                                        <li class="nav-item mt-4 pt-2">
+                                            <a class="nav-link rounded active" id="pills-cloud-tab" data-bs-toggle="pill" href="#pills-cloud" role="tab" aria-controls="pills-cloud" aria-selected="false">
+                                                <div class="skill-container text-center pt-1 pb-1">
+                                                    <h6 class="title mb-0">UX Design</h6>
+                                                </div>
+                                            </a><!--end nav link-->
+                                        </li><!--end nav item-->
+                                        
+                                        <li class="nav-item mt-4 pt-2">
+                                            <a class="nav-link rounded" id="pills-smart-tab" data-bs-toggle="pill" href="#pills-smart" role="tab" aria-controls="pills-smart" aria-selected="false">
+                                                <div class="skill-container text-center pt-1 pb-1">
+                                                    <h6 class="title mb-0">Language Skill</h6>
+                                                </div>
+                                            </a><!--end nav link-->
+                                        </li><!--end nav item-->
+                                        
+                                        <li class="nav-item mt-4 pt-2">
+                                            <a class="nav-link rounded" id="pills-apps-tab" data-bs-toggle="pill" href="#pills-apps" role="tab" aria-controls="pills-apps" aria-selected="false">
+                                                <div class="skill-container text-center pt-1 pb-1">
+                                                    <h6 class="title mb-0">Web development</h6>
+                                                </div>
+                                            </a><!--end nav link-->
+                                        </li><!--end nav item-->
+                                    </ul><!--end nav pills-->
+                                </div><!--end col-->
+
+                                <div class="col-lg-9 col-md-8 col-12">
+                                    <div class="tab-content ps-lg-4" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-cloud" role="tabpanel" aria-labelledby="pills-cloud-tab">
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">HTML</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:84%;">
+                                                        <div class="progress-value d-block text-dark h6">84%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">CSS</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:75%;">
+                                                        <div class="progress-value d-block text-dark h6">75%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">JQuery</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:79%;">
+                                                        <div class="progress-value d-block text-dark h6">79%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                        </div><!--end teb pane-->
+                                        
+                                        <div class="tab-pane fade" id="pills-smart" role="tabpanel" aria-labelledby="pills-smart-tab">
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">English</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:84%;">
+                                                        <div class="progress-value d-block text-dark h6">84%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">Spanish</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:75%;">
+                                                        <div class="progress-value d-block text-dark h6">75%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">German</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:79%;">
+                                                        <div class="progress-value d-block text-dark h6">79%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                        </div><!--end teb pane-->
+
+                                        <div class="tab-pane fade" id="pills-apps" role="tabpanel" aria-labelledby="pills-apps-tab">
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">Photoshop</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:84%;">
+                                                        <div class="progress-value d-block text-dark h6">84%</div>
+                                                    </div>
+                                                </div>
+                                            </div><!--end process box-->
+                                            <div class="progress-box mt-4 pt-2">
+                                                <h6 class="font-weight-normal">Sketch</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar position-relative bg-primary" style="width:75%;">
+                                                        <div class="progress-value d-block text-dark h6">75%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end teb pane-->
+                                    </div><!--end tab content-->
+                                </div><!--end col-->
+                            </div> <!-- end row --> 
+                        </div> <!-- end about detail -->
+                    </div> <!-- end col -->        
+                </div><!--end row-->
+            </div><!--end container fluid-->
+        </section><!--end section-->   
+        <!-- Skill & CTA End -->
+
+        <!-- Projects End -->
+        <section class="section bg-light" id="projects">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">My Portfolio</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>    
+            
+            <div class="container">
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-12 filters-group-wrap">
+                        <div class="filters-group">
+                            <ul class="portfolioFilter list-inline mb-0 filter-options text-center">
+                                <li class="list-inline-item categories-name border text-dark px-3 rounded active" data-group="all">All</li>
+                                <li class="list-inline-item categories-name border text-dark px-3 rounded" data-group="branding">Branding</li>
+                                <li class="list-inline-item categories-name border text-dark px-3 rounded" data-group="designing">Designing</li>
+                                <li class="list-inline-item categories-name border text-dark px-3 rounded" data-group="photography">Photography</li>
+                                <li class="list-inline-item categories-name border text-dark px-3 rounded" data-group="development">Development</li>
+                            </ul>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <!-- Gallary -->
+                <div id="grid" class="row">
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/1.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/1.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">Working Keyboard</a></h5>
+                                <span>Branding</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "development"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/2.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/2.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">The Micro Headphones</a></h5>
+                                <span>Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["designing", "development"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/3.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/3.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">The Coffee Cup</a></h5>
+                                <span>Designing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["photography"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/4.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/4.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">The Wooden Desk</a></h5>
+                                <span>Photography</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["photography"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/5.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/5.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">Camera</a></h5>
+                                <span>Illustrations</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["photography"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/6.jpg" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/6.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="page-portfolio-detail.html" class="title text-dark">Branded Laptop</a></h5>
+                                <span>Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 mt-4 pt-2">
+                        <div class="text-center">
+                            <a href="page-portfolio.html" class="btn btn-outline-primary">More works <i data-feather="refresh-cw" class="fea icon-sm"></i></a>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Projects End -->
+
+        <!-- Testimonial Start -->
+        <section class="cta-full">
+            <div class="container-fluid">
+                <div class="row position-relative">
+                    <div class="col-lg-8 order-2">
+                        <div class="cta-full-img-box">
+                            <div class="row justify-content-center">
+                                <div class="col-12 text-center">
+                                    <div class="section-title">
+                                        <div class="position-relative">
+                                            <h4 class="title text-uppercase mb-4">Clients say</h4>
+                                            <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                                        </div>
+                                        <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="client-review-slider">
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Design Quality "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3">There are many variations of passages of Lorem Ipsum available, by injected humour, or randomised words which don't look even slightly believable. </p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/01.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Erich Bissonette</h5>
+                                                        <small class="designation text-muted">Oppo</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                        <!--End Client-->
+
+                                        <!--Start Client-->                            
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star-half"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Code Quality "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/02.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Tina Meyer</h5>
+                                                        <small class="designation text-muted">Vivo</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                        <!--End Client-->
+
+                                        <!--Start Client-->                            
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Feature Availability "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/03.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Sharon Murdock</h5>
+                                                        <small class="designation text-muted">Apple</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                        <!--End Client-->
+
+                                        <!--Start Client-->
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Customizability "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/04.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Jesse Hunt</h5>
+                                                        <small class="designation text-muted">Samsung</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                        <!--End Client-->
+
+                                        <!--Start Client-->                            
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star-half"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star-outline"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Flexibility "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3">There are many variations of passages of Lorem Ipsum available, by injected humour, or randomised words which don't look even slightly believable. </p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/05.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Andrea Toy</h5>
+                                                        <small class="designation text-muted">Nokia</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                        <!--End Client-->
+
+                                        <!--Start Client-->                            
+                                        <div class="tiny-slide">
+                                            <div class="client-review rounded shadow m-2">
+                                                <div class="review-star">
+                                                    <ul class="list-unstyled float-right mb-0">
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                        <li class="list-inline-item text-primary"><i class="mdi mdi-star"></i></li>
+                                                    </ul>
+
+                                                    <div class="review-base">
+                                                        <h6 class="title">" Development "</h6>
+                                                    </div>
+                                                </div><!--end review star-->
+
+                                                <p class="text-muted review-para font-italic mt-3 mb-3"> It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                                <div class="reviewer d-flex align-items-center">
+                                                    <img src="images/client/06.jpg" class="img-fluid rounded-circle avatar avatar-small me-3" alt="">
+                                                    <div class="content">
+                                                        <h5 class="name mb-0">Jay Allums</h5>
+                                                        <small class="designation text-muted">RedMI</small>
+                                                    </div>
+                                                </div><!--end reviewer-->
+                                            </div><!--end client review-->
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div> <!-- end about detail -->
+                    </div> <!-- end col -->    
+
+                    <div class="col-lg-4 offset-lg-8 padding-less img order-1" style="background-image:url('images/testi.jpg')" ></div><!-- end col -->    
+                </div><!--end row-->
+            </div><!--end container fluid-->
+        </section><!--end section-->  
+        <!-- Testimonial End -->
+
+        <!-- Blog Start -->
+        <section class="section bg-light pb-3" id="news">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">Latest News & Blog</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="blog-post rounded shadow">
+                            <img src="images/blog/01.jpg" class="img-fluid rounded-top" alt="">
+                            <div class="content pt-4 pb-4 p-3">
+                                <ul class="list-unstyled d-flex justify-content-between post-meta">
+                                    <li><i data-feather="user" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Cristino</a></li> 
+                                    <li><i data-feather="tag" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Branding</a></li>                                    
+                                </ul>  
+                                <h5 class="mb-3"><a href="page-blog-detail.html" class="title text-dark">Our Home Entertainment has Evolved Significantly</a></h5> 
+                                <ul class="list-unstyled mb-0 pt-3 border-top d-flex justify-content-between">
+                                    <li><a href="javascript:void(0)" class="text-dark">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a></li>
+                                    <li><i class="mdi mdi-calendar-edit me-1"></i>10th April, 2020</li>
+                                </ul>
+                            </div><!--end content-->
+                        </div><!--end blog post-->
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="blog-post rounded shadow">
+                            <img src="images/blog/02.jpg" class="img-fluid rounded-top" alt="">
+                            <div class="content pt-4 pb-4 p-3">
+                                <ul class="list-unstyled d-flex justify-content-between post-meta">
+                                    <li><i data-feather="user" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Cristino</a></li> 
+                                    <li><i data-feather="tag" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Branding</a></li>                                    
+                                </ul> 
+                                <h5 class="mb-3"><a href="page-blog-detail.html" class="title text-dark">These Are The Voyages of The Starship Enterprise</a></h5>
+                                <ul class="list-unstyled mb-0 pt-3 border-top d-flex justify-content-between">
+                                    <li><a href="javascript:void(0)" class="text-dark">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a></li>
+                                    <li><i class="mdi mdi-calendar-edit me-1"></i>10th April, 2020</li>
+                                </ul>
+                            </div><!--end content-->
+                        </div><!--end blog post-->
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="blog-post rounded shadow">
+                            <img src="images/blog/03.jpg" class="img-fluid rounded-top" alt="">
+                            <div class="content pt-4 pb-4 p-3">
+                                <ul class="list-unstyled d-flex justify-content-between post-meta">
+                                    <li><i data-feather="user" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Cristino</a></li> 
+                                    <li><i data-feather="tag" class="fea icon-sm me-1"></i><a href="javascript:void(0)" class="text-dark">Branding</a></li>                                    
+                                </ul> 
+                                <h5 class="mb-3"><a href="page-blog-detail.html" class="title text-dark">Three Reasons Visibility Matters in Supply Chain</a></h5>
+                                <ul class="list-unstyled mb-0 pt-3 border-top d-flex justify-content-between">
+                                    <li><a href="javascript:void(0)" class="text-dark">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a></li>
+                                    <li><i class="mdi mdi-calendar-edit me-1"></i>10th April, 2020</li>
+                                </ul>
+                            </div><!--end content-->
+                        </div><!--end blog post-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+            <div class="container-fluid mt-100 mt-60">
+                <div class="rounded-pill py-5" style="background: url('images/hireme.jpg') center center;">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center">
+                                <h4 class="text-light title-dark">I Am Available For Freelancer Projects.</h4>
+                                <p class="text-white-50 mx-auto mt-4 para-desc">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                                <div class="mt-4">
+                                    <a href="#contact" class="btn btn-primary mouse-down">Hire me <i data-feather="chevron-down" class="fea icon-sm"></i></a>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div><!--end container-->
+                </div><!--end div-->
+            </div><!--end container fluid-->
+        </section><!--end section-->
+        <!-- Blog Start -->
+
+        <!-- Contact Start -->
+        <section class="section pb-0" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">Contact Me</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-md-4 mt-4 pt-2">
+                        <div class="contact-detail text-center">
+                            <div class="icon">
+                                <i data-feather="phone" class="fea icon-md"></i>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title text-uppercase">Phone</h5>
+                                <p class="text-muted">Promising development turmoil inclusive education transformative community</p>
+                                <a href="tel:+152534-468-854" class="text-primary">+152 534-468-854</a>
+                            </div>  
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-md-4 mt-4 pt-2">
+                        <div class="contact-detail text-center">
+                            <div class="icon">
+                                <i data-feather="mail" class="fea icon-md"></i>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title text-uppercase">Email</h5>
+                                <p class="text-muted">Promising development turmoil inclusive education transformative community</p>
+                                <a href="mailto:contact@example.com" class="text-primary">contact@example.com</a>
+                            </div>  
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-md-4 mt-4 pt-2">
+                        <div class="contact-detail text-center">
+                            <div class="icon">
+                                <i data-feather="map-pin" class="fea icon-md"></i>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title text-uppercase">Location</h5>
+                                <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston, USA 485</p>
+                                <a href="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569" class="video-play-icon text-primary">View on Google map</a>
+                            </div>  
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+
+        <section class="section pt-5 mt-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="custom-form mb-sm-30">
+                            <form method="post" name="myForm" onsubmit="return validateForm()">
+                                <p id="error-msg"></p>
+                                <div id="simple-msg"></div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-6">
+                                                <div class="form-group">
+                                                    <input name="name" id="name" type="text" class="form-control border rounded" placeholder="First Name :">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-12 col-md-6">
+                                                <div class="form-group">
+                                                    <input name="email" id="email" type="email" class="form-control border rounded" placeholder="Your email :">
+                                                </div> 
+                                            </div><!--end col-->
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input name="subject" id="subject" class="form-control border rounded" placeholder="Your subject :">
+                                                </div>                                                                               
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div><!--end col-->
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <textarea name="comments" id="comments" rows="4" class="form-control border rounded" placeholder="Your Message :"></textarea>
+                                        </div>
+                                    </div><!--end col-->
+
+                                    <div class="col-sm-12 text-end">
+                                        <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!--end custom-form-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Contact End -->
+
+        <!-- Footer Start -->
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <a href="#"><img src="images/logo-light.png" alt=""></a>
+                        <p class="para-desc mx-auto mt-5">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                        <ul class="list-unstyled mb-0 mt-4 social-icon">
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-vimeo"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-linkedin"></i></a></li>
+                        </ul>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <footer class="footer footer-bar bg-dark">
+            <div class="container text-foot text-center">
+                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Cristino. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="http://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- Footer End -->
+        
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" class="back-to-top rounded text-center" id="back-to-top"> 
+            <i class="mdi mdi-chevron-up d-block"> </i> 
+        </a>
+        <!-- Back to top -->
+
+        <!-- Style switcher -->
+        <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
+            <div>
+                <h6 class="title text-center">Select Your Color</h6>
+                <ul class="pattern">
+                    <li class="list-inline-item">
+                        <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color3" href="javascript: void(0);" onclick="setColor('light-green')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color4" href="javascript: void(0);" onclick="setColor('yellow')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color5" href="javascript: void(0);" onclick="setColor('light-yellow')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color6" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                    </li>
+                </ul>
+
+                <h6 class="title text-center pt-3 mb-0 border-top">Theme Option</h6>
+                <ul class="text-center list-unstyled mb-0">
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" onclick="setTheme('style-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" onclick="setTheme('style')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-rtl-version t-rtl-dark mt-2" onclick="setTheme('style-dark-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-ltr-version t-ltr-dark mt-2" onclick="setTheme('style-dark')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2" onclick="setTheme('style-dark')">Dark</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark light-version t-light mt-2" onclick="setTheme('style')">Light</a></li>
+                </ul>
+
+                <h6 class="title text-center pt-3 mb-0 border-top">Download</h6>
+                <ul class="text-center list-unstyled mb-0">
+                    <li><a href="https://1.envato.market/cristino" target="_blank" class="btn btn-sm btn-block btn-warning mt-2 w-100">Download</a></li>
+                </ul>
+            </div>
+            <div class="bottom p-0">
+            </div>
+        </div>
+        <!-- end Style switcher -->
+
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/gumshoe.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
+        <!-- Lightbox -->
+        <script src="js/tobii.min.js"></script>
+        <script src="js/shuffle.min.js"></script>
+        <!-- Feather icon -->
+        <script src="js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
