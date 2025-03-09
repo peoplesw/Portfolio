@@ -87,10 +87,12 @@
         }
         .portfolio-box .portfolio-box-img img {
             transition: none !important;
-            opacity: 1 !important; /* Force opacity to stay at 1 */
+            opacity: 1 !important;
         }
         .portfolio-box .portfolio-box-img .overlay-work {
             display: none !important;
+            background: transparent !important;
+            opacity: 0 !important;
         }
         .portfolio-box .gallary-title {
             background: transparent !important;
@@ -103,11 +105,20 @@
         }
         .portfolio-box:hover .portfolio-box-img img {
             transform: none !important;
-            opacity: 1 !important; /* Force opacity to stay at 1 on hover */
+            opacity: 1 !important;
+        }
+        .portfolio-box:hover .overlay-work {
+            opacity: 0 !important;
+            background: transparent !important;
         }
 
         .picture-item {
             cursor: pointer;
+        }
+
+        .portfolio-link {
+            color: #161C2D;
+            text-decoration: none;
         }
     </style>
 
@@ -778,22 +789,22 @@
 
                 <!-- Gallary -->
                 <div id="grid" class="row">
-                    <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
+                    <a href="https://cpcourse26.myshopify.com/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
                         <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
                             <div class="portfolio-box-img position-relative overflow-hidden">
-                                <img class="item-container img-fluid mx-auto" src="images/portfolio/1.jpg" alt="1">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/shopifySite.png" alt="1">
                                 <div class="overlay-work">
                                     <div class="work-content text-center">
-                                        <a href="images/portfolio/1.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                        <a href="https://cpcourse26.myshopify.com/" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="gallary-title py-4 text-center">
-                                <h5><a href="page-portfolio-detail.html" class="title text-dark">Working Keyboard</a></h5>
-                                <span>Branding</span>
+                                <h5><a href="https://cpcourse26.myshopify.com/" target="_blank" class="title text-dark">Shopify</a></h5>
+                                <a href="https://cpcourse26.myshopify.com/" target="_blank"><span class="portfolio-link">Nike Running Shoes</span></a>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                     
                     <div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "development"]'>
                         <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
