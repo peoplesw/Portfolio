@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>William Peoples - Personal Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+        <meta name="keywords" content="Bootstrap 5, premium, marketing, multipurpose">
+        <meta content="Shreethemes" name="author">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- Lightbox -->
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css">
+        <!-- Icon -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+        <!-- SLIDER -->
+        <link rel="stylesheet" href="css/tiny-slider.css"/>
+        <!-- Custom Css -->
+        <link href="css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt">
+        <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+    </head>
+
+    <style>
+       #home {
+            background-image: url('images/home/heroLight.png');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+       }
+
+       .hero-image {
+            display: none;
+       }
+       
+       @media (max-width: 1242px) {
+            #home {
+                background-image: none !important;
+                padding-top: 100px; /* Add padding at the top to push content down */
+            }
+            .hero-image {
+                display: block;
+                position: absolute;
+                top: 150px; /* Increased space from top */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 300px;
+                height: 300px;
+                z-index: 1;
+            }
+            .container.position-relative {
+                padding-top: 0;
+            }
+            .title-heading {
+                text-align: center;
+                padding-top: 500px; /* Increased to account for nav + hero image + spacing */
+            }
+            .title-heading .para-desc {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+        }
+
+        @media (min-width: 1243px) {
+            .title-heading {
+                padding-top: 0;
+            }
+        }
+
+        @media (max-width: 1242px) {
+            .hero-image {
+                display: block;
+            }
+        }
+
+        .service-wrapper {
+            background-color: white;
+            height: 250px;
+        }
+
+        .portfolio-box {
+            transition: none !important;
+        }
+        .portfolio-box .portfolio-box-img img {
+            transition: none !important;
+            opacity: 1 !important;
+        }
+        .portfolio-box .portfolio-box-img .overlay-work {
+            display: none !important;
+            background: transparent !important;
+            opacity: 0 !important;
+        }
+        .portfolio-box .gallary-title {
+            background: transparent !important;
+        }
+        .portfolio-box .gallary-title .title:hover {
+            color: inherit !important;
+        }
+        .portfolio-box:hover {
+            transform: none !important;
+        }
+        .portfolio-box:hover .portfolio-box-img img {
+            transform: none !important;
+            opacity: 1 !important;
+        }
+        .portfolio-box:hover .overlay-work {
+            opacity: 0 !important;
+            background: transparent !important;
+        }
+
+        .picture-item {
+            cursor: pointer;
+        }
+
+        .portfolio-link {
+            color: #161C2D;
+            text-decoration: none;
+        }
+
+        #projects {
+            padding-bottom: 225px;
+        }
+    </style>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+             
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader -->
+        
+        <!-- Navbar Start -->
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
+    		<div class="container">
+                <a class="navbar-brand" href="">
+                    <img src="" class="logo-light-mode" alt="">
+                    <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span data-feather="menu" class="fea icon-md"></span>
+                </button><!--end button-->
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul id="navbar-navlist" class="navbar-nav navbar-nav-link mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li><!--end nav item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li><!--end nav item-->
+                    </ul>
+
+                    <!-- <ul class="list-unstyled mb-0 mt-2 mt-sm-0 social-icon">
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-instagram"></i></a></li>
+                    </ul> -->
+                </div> 
+            </div><!--end container-->
+		</nav><!--end navbar-->
+        <!-- Navbar End -->
+
+        <!-- HOME START-->
+        <section class="bg-home bg-light d-table w-100" id="home">
+            <div class="container position-relative">
+                <div class="hero-image mt-5" style="width: 300px; height: 300px; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 1;">
+                    <img src="images/home/heroImageLight.jpg" alt="" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="title-heading mt-5" style="padding-top: 300px;">
+                            <h6 class="sub-title">Looking for a Web Producer !</h6>
+                            <h1 class="heading text-primary mb-3">I'm William Peoples</h1>
+                            <p class="para-desc text-muted">Crafting seamless digital experiences from concept to launch. As a Web Producer, I manage every detail to ensure your web projects are delivered flawlessly.</p>
+                            <div class="mt-4 pt-2">
+                                <a href="#projects" class="btn btn-primary rounded mb-2 me-2">Portfolio</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->             
+        </section><!--end section-->
+        <!-- HOME END-->
+        
+        <!-- About Start -->
+        <section class="section pb-3" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="about-hero">
+                            <img src="images/aboutImageLightNoBg.png" style="width: 100%; height: 100%; object-fit: contain;" class="img-fluid mx-auto d-block about-tween position-relative" alt="">
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                        <div class="section-title mb-0 ms-lg-5 ms-md-3">
+                            <h4 class="title text-primary mb-3">William Peoples</h4>
+                            <h6 class="designation mb-3"><span class="text-primary">Web Producer</span></h6>
+                            <p class="text-muted">I’m an enthusiastic web producer dedicated to delivering seamless digital experiences. Continuous personal development is essential to me, and I’m always honing my skills to deliver the best results for every project. With a keen eye for detail and the ability to manage tight deadlines, I ensure that all web projects are completed on time, within budget, and to the highest specifications. I thrive on bringing creative ideas to life while maintaining a user-centered approach.</p>
+                            <p class="text-muted">I believe that effective collaboration and clear communication are key to achieving project success. By working closely with cross-functional teams, I ensure that every project is aligned with both business goals and user needs. My commitment to excellence drives me to continually push the boundaries of what's possible in web production, delivering results that make a lasting impact.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+            
+        <!-- Services Start -->
+        <section class="section bg-light" id="skills">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">My Skills</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Skilled Web Producer with expertise in managing all phases of web projects, from planning and design to development and launch, ensuring seamless execution.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 512 512" class="svg replaced-svg"><path d="m0 0 31.800781 448.101562 194.398438 63.898438 194.398437-63.898438 31.800782-448.101562zm0 0" fill="#ff7816"></path><path d="m452.398438 0-31.800782 448.101562-194.398437 63.898438v-512zm0 0" fill="#ff4b00"></path><path d="m367.5 136h-222.300781l5.398437 75h211.503906l-12.902343 181.597656-123 41.101563-123-41.101563-4.199219-60.597656h60l1.199219 16.5 66 21.898438 66-21.898438 5.398437-77.5h-203.097656l-13.800781-195h291zm0 0" fill="#ececf1"></path><g fill="#e2e2e7"><path d="m362.101562 211-12.902343 181.597656-123 41.101563v-63.300781l66-21.898438 5.398437-77.5h-71.398437v-60zm0 0"></path><path d="m371.699219 76-4.199219 60h-141.300781v-60zm0 0"></path></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">HTML</h5>
+                            </div>
+                        
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="svg replaced-svg"><polygon style="fill:#2196F3;" points="32,0 72.8,460.8 256,512 439.136,460.832 480,0 "></polygon><polygon style="fill:#FAFAFA;" points="392.768,150.688 387.616,208.576 372.064,382.112 256,414.208 255.904,414.24   139.904,382.112 131.808,291.36 188.64,291.36 192.864,338.432 255.936,355.456 255.968,355.424 319.136,338.4 327.744,259.968   129.088,260.512 123.456,206.88 332.512,204.416 336.736,147.008 117.856,147.616 114.176,94.208 256,94.208 397.824,94.208 "></polygon><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">CSS</h5>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                               <img src="images/home/js.png" alt="" style="width: 68px; height: 76.5px;">
+                            </div>
+                            <div class="content mt-3">
+                                <h5 class="title">Javascript</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <svg style="width: 60px; height: 67.5px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="svg replaced-svg"><polygon style="fill:#C7CFE2;" points="239.484,363.355 156.903,363.355 148.645,421.161 247.742,421.161 "></polygon><polygon style="fill:#AFB9D2;" points="243.023,388.129 239.484,363.355 156.903,363.355 153.364,388.129 "></polygon><path style="fill:#D5DCED;" d="M379.871,371.613H16.516C7.395,371.613,0,364.217,0,355.096v-256c0-9.122,7.395-16.516,16.516-16.516  h363.355c9.122,0,16.516,7.395,16.516,16.516v256C396.387,364.217,388.993,371.613,379.871,371.613z"></path><path style="fill:#C7CFE2;" d="M16.516,82.581C7.395,82.581,0,89.975,0,99.097v256c0,9.121,7.395,16.516,16.516,16.516h272.516  L107.355,82.581H16.516z"></path><path style="fill:#5B5D6E;" d="M379.871,82.581H16.516C7.395,82.581,0,89.975,0,99.097v231.226h396.387V99.097  C396.387,89.975,388.992,82.581,379.871,82.581z"></path><path style="fill:#464655;" d="M0,99.097v231.226h263.078L107.355,82.581H16.516C7.395,82.581,0,89.975,0,99.097z"></path><path style="fill:#00AAF0;" d="M363.355,305.548H33.032c-4.561,0-8.258-3.697-8.258-8.258V115.613c0-4.561,3.697-8.258,8.258-8.258  h330.323c4.561,0,8.258,3.697,8.258,8.258V297.29C371.613,301.851,367.916,305.548,363.355,305.548z"></path><path style="fill:#AFB9D2;" d="M429.423,222.968H313.806c-9.122,0-16.516,7.395-16.516,16.516v173.419  c0,9.122,7.395,16.516,16.516,16.516H429.42c9.121,0,16.516-7.394,16.516-16.516l0.003-173.42  C445.939,230.362,438.544,222.968,429.423,222.968z"></path><path style="fill:#959CB5;" d="M297.29,239.484v173.419c0,9.121,7.395,16.516,16.516,16.516h115.613L313.806,222.968  C304.685,222.968,297.29,230.362,297.29,239.484z"></path><path style="fill:#00C3FF;" d="M433.548,404.645H309.677c-2.28,0-4.129-1.849-4.129-4.129V251.871c0-2.28,1.849-4.129,4.129-4.129  h123.871c2.28,0,4.129,1.849,4.129,4.129v148.645C437.677,402.797,435.829,404.645,433.548,404.645z"></path><path style="fill:#5B5D6E;" d="M355.097,338.581h148.645c4.561,0,8.258,3.697,8.258,8.258v74.323c0,4.561-3.697,8.258-8.258,8.258  H355.097c-4.561,0-8.258-3.697-8.258-8.258v-74.323C346.839,342.278,350.536,338.581,355.097,338.581z"></path><path style="fill:#464655;" d="M355.097,338.581c-4.561,0-8.258,3.697-8.258,8.258v74.323c0,4.56,3.697,8.258,8.258,8.258h99.097  l-49.548-90.839H355.097z"></path><path style="fill:#D5DCED;" d="M264.258,429.419H132.129c-4.565,0-8.258-3.698-8.258-8.258s3.694-8.258,8.258-8.258h132.129  c4.565,0,8.258,3.698,8.258,8.258S268.823,429.419,264.258,429.419z"></path><path style="fill:#959CB5;" d="M206.452,359.226h-16.516c-4.561,0-8.258-3.697-8.258-8.258l0,0c0-4.561,3.697-8.258,8.258-8.258  h16.516c4.561,0,8.258,3.697,8.258,8.258l0,0C214.71,355.529,211.012,359.226,206.452,359.226z"></path><path style="fill:#00D2FF;" d="M483.097,421.161H375.742c-2.28,0-4.129-1.849-4.129-4.129v-66.065c0-2.28,1.849-4.129,4.129-4.129  h107.355c2.28,0,4.129,1.849,4.129,4.129v66.065C487.226,419.313,485.377,421.161,483.097,421.161z"></path><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">Responsive Design</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                                <img src="images/home/wpLogo.png" alt="" style="width: 80px; height: 80px;">
+                            </div>
+                            <div class="content mt-4">
+                                <h5 class="title">Wordpress</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="service-wrapper rounded position-relative text-center border border-footer p-4 pt-5 pb-5">
+                            <div class="icon text-primary">
+                               <img src="images/home/shopifyLogo.png" alt="" style="width: 120px; height: 100px;">
+                            </div>
+                            <div class="content mt-1">
+                                <h5 class="title">Shopify</h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section>
+        <!-- Services End -->
+
+        <!-- Projects End -->
+        <section class="section bg-light" id="projects">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <div class="position-relative">
+                                <h4 class="title text-uppercase mb-4">My Portfolio</h4>
+                                <div>
+                                    <div class="title-box"></div>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Explore my diverse web projects, including a Shopify store, a WordPress site, and a custom HTML/CSS build, showcasing my versatile development skills.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>    
+            
+            <div class="container">
+                <!-- Gallary -->
+                <div id="grid" class="row">
+                    <a href="https://cpcourse26.myshopify.com/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/shopifySite.png" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="https://cpcourse26.myshopify.com/" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="https://cpcourse26.myshopify.com/" target="_blank" class="title text-dark">Shopify</a></h5>
+                                <a href="https://cpcourse26.myshopify.com/" target="_blank"><span class="portfolio-link">Nike E-commerce</span></a>
+                            </div>
+                        </div>
+                    </div></a>
+                    
+                    <a href="https://foodurestaurant.netlify.app/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "development"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/HTMLSite.png" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="https://foodurestaurant.netlify.app/" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="https://foodurestaurant.netlify.app/" target="_blank" class="title text-dark portfolio-link">HTML & CSS</a></h5>
+                                <a href="https://foodurestaurant.netlify.app/" target="_blank" class="portfolio-link"><span>Restaurant Landing Page</span></a>
+                            </div>
+                        </div>
+                    </div></a>
+                    
+                    <a href="https://elevateflooring9.wordpress.com/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["designing", "development"]'>
+                        <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
+                            <div class="portfolio-box-img position-relative overflow-hidden">
+                                <img class="item-container img-fluid mx-auto" src="images/portfolio/WordpressSite.png" alt="1">
+                                <div class="overlay-work">
+                                    <div class="work-content text-center">
+                                        <a href="images/portfolio/3.jpg" class="lightbox text-light work-icon bg-dark d-inline-block rounded-pill "><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallary-title py-4 text-center">
+                                <h5><a href="https://elevateflooring9.wordpress.com/" target="_blank" class="title text-dark portfolio-link">Wordpress</a></h5>
+                                <a href="https://elevateflooring9.wordpress.com/" target="_blank" class="portfolio-link"><span>Flooring Company Website</span></a>
+                            </div>
+                        </div>
+                    </div></a>
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Projects End -->
+
+        <!-- Footer Start -->
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <p class="para-desc mx-auto mt-5">Let's create something amazing together! Reach out to discuss how I can bring your digital projects to life with precision and creativity.</p>
+                        <!-- <ul class="list-unstyled mb-0 mt-4 social-icon">
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-vimeo"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-linkedin"></i></a></li>
+                        </ul> -->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <footer class="footer footer-bar bg-dark">
+            <div class="container text-foot text-center">
+                <p class="mb-0">Created by William Peoples © <script>document.write(new Date().getFullYear())</script></p>
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- Footer End -->
+        
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" class="back-to-top rounded text-center" id="back-to-top"> 
+            <i class="mdi mdi-chevron-up d-block"> </i> 
+        </a>
+        <!-- Back to top -->
+
+        <!-- Style switcher -->
+        <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
+            <div>
+                <h6 class="title text-center">Select Your Color</h6>
+                <ul class="pattern">
+                    <li class="list-inline-item">
+                        <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color3" href="javascript: void(0);" onclick="setColor('light-green')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color4" href="javascript: void(0);" onclick="setColor('yellow')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color5" href="javascript: void(0);" onclick="setColor('light-yellow')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color6" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                    </li>
+                </ul>
+
+                <h6 class="title text-center pt-3 mb-0 border-top">Theme Option</h6>
+                <ul class="text-center list-unstyled mb-0">
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" onclick="setTheme('style-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" onclick="setTheme('style')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-rtl-version t-rtl-dark mt-2" onclick="setTheme('style-dark-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-ltr-version t-ltr-dark mt-2" onclick="setTheme('style-dark')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2" onclick="setTheme('style-dark')">Dark</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark light-version t-light mt-2" onclick="setTheme('style')">Light</a></li>
+                </ul>
+
+                <h6 class="title text-center pt-3 mb-0 border-top">Download</h6>
+                <ul class="text-center list-unstyled mb-0">
+                    <li><a href="https://1.envato.market/cristino" target="_blank" class="btn btn-sm btn-block btn-warning mt-2 w-100">Download</a></li>
+                </ul>
+            </div>
+            <div class="bottom p-0">
+            </div>
+        </div>
+        <!-- end Style switcher -->
+
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/gumshoe.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
+        <!-- Lightbox -->
+        <script src="js/tobii.min.js"></script>
+        <script src="js/shuffle.min.js"></script>
+        <!-- Feather icon -->
+        <script src="js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
