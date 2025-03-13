@@ -112,6 +112,14 @@
             background: transparent !important;
         }
 
+        @media (max-width: 991px) {
+            .projects-container {
+                margin: 0 auto;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         .picture-item {
             cursor: pointer;
         }
@@ -327,16 +335,49 @@
                                     <div class="title-line"></div>
                                 </div>
                             </div>
-                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Explore my diverse web projects, including a Shopify store, a WordPress site, and a custom HTML/CSS build, showcasing my versatile development skills.</p>
+                            <p class="text-muted mx-auto para-desc mt-5 mb-0">Explore my diverse web projects, including a Shopify store, a WordPress site, and a custom HTML/CSS landing page, showcasing my versatile development skills.</p>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
             </div>    
             
-            <div class="container">
-                <!-- Gallary -->
-                <div id="grid" class="row">
-                    <a href="https://nikerunningsneakers.myshopify.com/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
+            <!-- <div class="container"> -->
+               <!-- Gallary --> 
+                <!-- <div id="grid" class="row" style="display: flex; justify-content: space-between;">  -->
+                <div class="container projects-container"  style="display: flex; justify-content: space-between; flex-wrap: wrap; padding-top: 50px; text-align: center;">
+                    
+                    <a href="https://nikerunningsneakers.myshopify.com/" target="_blank">
+                    <div style="width:356px; height: 328px; border: 1px solid black; border-radius: 10px; overflow: hidden; color: black">
+                        <div class="image-div">
+                            <img src="images/portfolio/shopifySite.png" alt="" style="width: 100%">
+                        </div>
+                        <h5 style="margin-top: 20px;">Shopify</h5>
+                        <span>Nike E-commerce</span>
+                    </div>
+                    </a>
+
+                    <a href="https://foodurestaurant.netlify.app/" target="_blank">
+                    <div style="width:356px; height: 328px; border: 1px solid black; border-radius: 10px; overflow: hidden; color: black">
+                        <div class="image-div">
+                            <img src="images/portfolio/HTMLSite.png" alt="" style="width: 100%">
+                        </div>
+                        <h5 style="margin-top: 20px;">HTML & CSS</h5>
+                        <span>Restaurant Landing Page</span>
+                    </div>
+                    </a>
+
+                    <a href="https://elevateflooring9.wordpress.com/" target="_blank">
+                    <div style="width:356px; height: 328px; border: 1px solid black; border-radius: 10px; overflow: hidden; color: black">
+                        <div class="image-div">
+                            <img src="images/portfolio/wordpressSite.png" alt="" style="width: 100%">
+                        </div>
+                        <h5 style="margin-top: 20px;">Wordpress</h5>
+                        <span>Flooring Company Website</span>
+                    </div>
+                    </a>
+
+                </div>
+                    <!-- <a href="https://nikerunningsneakers.myshopify.com/" target="_blank"><div class="col-lg-4 col-md-6 mt-4 pt-2 picture-item" data-groups='["branding", "designing"]'>
                         <div class="item-box portfolio-box rounded shadow bg-white overflow-hidden">
                             <div class="portfolio-box-img position-relative overflow-hidden">
                                 <img class="item-container img-fluid mx-auto" src="images/portfolio/shopifySite.png" alt="1">
@@ -385,13 +426,13 @@
                                 <a href="https://elevateflooring9.wordpress.com/" target="_blank" class="portfolio-link"><span>Flooring Company Website</span></a>
                             </div>
                         </div>
-                    </div></a>
-            </div><!--end container-->
-        </section><!--end section-->
+                    </div></a> -->
+            <!-- </div> end container-->
+        <!-- </section>end section -->
         <!-- Projects End -->
 
         <!-- Footer Start -->
-        <footer class="footer bg-dark">
+        <footer class="footer bg-dark" style="position: relative; bottom: -250px; width: 100%;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
@@ -408,7 +449,7 @@
                 </div><!--end row-->
             </div><!--end container-->
         </footer><!--end footer-->
-        <footer class="footer footer-bar bg-dark">
+        <footer class="footer footer-bar bg-dark" style="position: relative; bottom: -250px; width: 100%;">
             <div class="container text-foot text-center">
                 <p class="mb-0">Created by William Peoples © <script>document.write(new Date().getFullYear())</script></p>
             </div><!--end container-->
